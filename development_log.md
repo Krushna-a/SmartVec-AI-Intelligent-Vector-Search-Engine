@@ -7,3 +7,7 @@
 ## 2026-03-09
 - Implemented the core vector item definitions and brute-force search primitives.
 - Added the first benchmark and search result scaffolding needed for comparison testing.
+
+## 2026-03-18
+- Added the hierarchical HNSW graph and layer-based search flow.
+- Tuned the distance metrics, candidate selection, and graph connectivity for semantic retrieval.
