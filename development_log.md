@@ -11,3 +11,7 @@
 ## 2026-03-18
 - Added the hierarchical HNSW graph and layer-based search flow.
 - Tuned the distance metrics, candidate selection, and graph connectivity for semantic retrieval.
+
+## 2026-03-26
+- Exposed the backend REST APIs for search, insert, delete, and benchmark operations.
+- Wired the statistics and graph-info endpoints to validate the live index behavior.
