@@ -15,3 +15,7 @@
 ## 2026-03-26
 - Exposed the backend REST APIs for search, insert, delete, and benchmark operations.
 - Wired the statistics and graph-info endpoints to validate the live index behavior.
+
+## 2026-04-06
+- Built the interactive browser dashboard with the scatter plot and search controls.
+- Added side-by-side algorithm selection, benchmark UI, and live latency feedback.
