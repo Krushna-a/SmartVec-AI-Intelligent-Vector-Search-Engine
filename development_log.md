@@ -19,3 +19,7 @@
 ## 2026-04-06
 - Built the interactive browser dashboard with the scatter plot and search controls.
 - Added side-by-side algorithm selection, benchmark UI, and live latency feedback.
+
+## 2026-04-15
+- Added document chunking and embedding ingestion using the Ollama local model pipeline.
+- Stored semantic document vectors in a dedicated HNSW index for retrieval tasks.
