@@ -23,3 +23,7 @@
 ## 2026-04-15
 - Added document chunking and embedding ingestion using the Ollama local model pipeline.
 - Stored semantic document vectors in a dedicated HNSW index for retrieval tasks.
+
+## 2026-04-24
+- Connected the question-answering flow to Ollama for retrieval-augmented generation.
+- Added context chips, streaming responses, and document-grounded AI replies.
