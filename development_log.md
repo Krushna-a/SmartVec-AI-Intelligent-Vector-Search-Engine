@@ -27,3 +27,7 @@
 ## 2026-04-24
 - Connected the question-answering flow to Ollama for retrieval-augmented generation.
 - Added context chips, streaming responses, and document-grounded AI replies.
+
+## 2026-05-05
+- Finalized the Windows setup guide, architecture notes, and usage walkthrough.
+- Prepared the project for user onboarding and a demo-friendly codebase handoff.
