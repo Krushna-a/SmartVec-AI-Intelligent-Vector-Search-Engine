@@ -31,3 +31,7 @@
 ## 2026-05-05
 - Finalized the Windows setup guide, architecture notes, and usage walkthrough.
 - Prepared the project for user onboarding and a demo-friendly codebase handoff.
+
+## 2026-05-13
+- Resolved the Windows compatibility issues in the vendored HTTP library.
+- Verified the C++ build pipeline and ensured the project ships in a demo-ready state.
