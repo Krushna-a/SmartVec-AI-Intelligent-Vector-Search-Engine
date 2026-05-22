@@ -35,3 +35,7 @@
 ## 2026-05-13
 - Resolved the Windows compatibility issues in the vendored HTTP library.
 - Verified the C++ build pipeline and ensured the project ships in a demo-ready state.
+
+## 2026-05-22
+- Cut the final release candidate with polished docs, stable APIs, and production-style benchmarks.
+- Tagged the repository as ready for GitHub distribution and live demos.
