@@ -5,6 +5,10 @@ Implements **HNSW**, **KD-Tree**, and **Brute Force** search algorithms side-by-
 
 > Built as an educational project to show how production vector databases like Pinecone, Weaviate, and Chroma actually work under the hood.
 
+## 🌐 Live Demo
+
+**[Try it live on Render →](#)** *(Link will be available after deployment)*
+
 ---
 
 ## What This Project Does
@@ -341,6 +345,69 @@ Then edit [main.cpp](main.cpp) line where `genModel` is set:
 std::string genModel = "llama3.2:1b";   // change this
 ```
 Recompile and restart.
+
+---
+
+## 🚀 Cloud Deployment (Render)
+
+Want to share your VectorDB with the world? Deploy it to Render for free:
+
+### Prerequisites for Deployment
+- GitHub account
+- Render account (sign up free at https://render.com)
+
+### Deployment Steps
+
+1. **Push your code to GitHub** (if not already done):
+```powershell
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/SmartVec-AI-Intelligent-Vector-Search-Engine.git
+git push -u origin main
+```
+
+2. **Connect to Render**:
+   - Go to https://render.com and sign up/login
+   - Click **"New +"** → **"Blueprint"**
+   - Connect your GitHub account
+   - Select your repository: `SmartVec-AI-Intelligent-Vector-Search-Engine`
+   - Render will auto-detect the `render.yaml` file
+   - Click **"Apply"**
+
+3. **Wait for deployment** (~5-10 minutes):
+   - Render will build the Docker container
+   - Install Ollama and pull the AI models
+   - Your app will be live at: `https://smartvec-vectordb.onrender.com`
+
+4. **Access your live app**:
+   - Copy the URL from Render dashboard
+   - Share it with anyone!
+
+### Important Notes for Cloud Deployment
+
+⚠️ **Free tier limitations**:
+- Service goes to sleep after 15 minutes of inactivity
+- First request after sleep takes ~30-60 seconds to wake up
+- 750 hours/month free (enough for testing and demos)
+- AI models may take 2-3 minutes to download on first boot
+
+💡 **For production use**: Upgrade to Render's paid plan ($7/month) for:
+- No sleep
+- Better performance
+- More RAM for faster AI responses
+
+### Alternative: Keep Running Locally
+
+If you prefer local hosting, you can use **ngrok** to expose your local server:
+
+```powershell
+# Install ngrok from https://ngrok.com
+ngrok http 8080
+```
+
+This gives you a public URL like `https://abc123.ngrok.io` that forwards to your local server.
 
 ---
 
