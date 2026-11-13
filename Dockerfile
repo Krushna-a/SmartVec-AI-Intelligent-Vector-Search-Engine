@@ -27,11 +27,16 @@ EXPOSE 8080
 
 # Create startup script that runs Ollama and the database
 RUN echo '#!/bin/bash\n\
+    set -e\n\
+    echo "Starting Ollama service..."\n\
     ollama serve &\n\
-    sleep 5\n\
-    ollama pull nomic-embed-text &\n\
-    ollama pull llama3.2 &\n\
-    sleep 10\n\
+    OLLAMA_PID=$!\n\
+    sleep 8\n\
+    echo "Pulling embedding model (nomic-embed-text)..."\n\
+    ollama pull nomic-embed-text || echo "Warning: Could not pull nomic-embed-text"\n\
+    echo "Pulling LLM model (llama3.2:1b - smaller for free tier)..."\n\
+    ollama pull llama3.2:1b || echo "Warning: Could not pull llama3.2:1b"\n\
+    echo "Models ready. Starting VectorDB server..."\n\
     ./db' > /app/start.sh && chmod +x /app/start.sh
 
 # Run the application
