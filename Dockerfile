@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     g++ \
     make \
     curl \
+    zstd \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Ollama
@@ -26,12 +27,12 @@ EXPOSE 8080
 
 # Create startup script that runs Ollama and the database
 RUN echo '#!/bin/bash\n\
-ollama serve &\n\
-sleep 5\n\
-ollama pull nomic-embed-text &\n\
-ollama pull llama3.2 &\n\
-sleep 10\n\
-./db' > /app/start.sh && chmod +x /app/start.sh
+    ollama serve &\n\
+    sleep 5\n\
+    ollama pull nomic-embed-text &\n\
+    ollama pull llama3.2 &\n\
+    sleep 10\n\
+    ./db' > /app/start.sh && chmod +x /app/start.sh
 
 # Run the application
 CMD ["/app/start.sh"]
